@@ -17,7 +17,7 @@ def about(request):
     return render(request, 'main/about.html')
 
 def contact(request):
-    return HttpResponse('<h3>Наши контакты</h3>')
-
-def hello(request):
-    return HttpResponse('<h1>Hello, world!</h1>')
+    data = {
+        'title': 'Контакты'
+    }
+    return render(request, 'main/contact.html', data)
